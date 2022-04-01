@@ -3,10 +3,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class R<T>{
+public class R<T> implements Serializable {
     private T data;
     private Object message;
     private int code;
