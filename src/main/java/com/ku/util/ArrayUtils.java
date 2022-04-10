@@ -15,7 +15,8 @@ public class ArrayUtils {
         }
         return  null;
     }
-    public static <T> T create() {
+    @SuppressWarnings("unchecked")
+	public static <T> T create() {
         try {
             return (T) new ArrayList<T>();
         }catch (Exception e){
@@ -38,7 +39,7 @@ public class ArrayUtils {
         return Array.getLength(array);
     }
 
-    public static  boolean isEmpty(Collection array){
+    public static  boolean isEmpty(Collection<?> array){
         if (array == null) {
             return  true;
         }
