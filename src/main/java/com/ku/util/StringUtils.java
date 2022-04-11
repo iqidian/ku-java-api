@@ -54,7 +54,7 @@ public class StringUtils {
     }
 
     /**
-     * @summary 转小写
+     * 转小写
      * @param str
      * @return
      */
@@ -66,7 +66,7 @@ public class StringUtils {
     }
 
     /**
-     * @summary 转大写
+     *  转大写
      * @param str
      * @return
      */

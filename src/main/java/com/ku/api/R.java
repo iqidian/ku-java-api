@@ -8,13 +8,14 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@SuppressWarnings({ "unchecked", "rawtypes", "serial" })
 public class R<T> implements Serializable {
     private T data;
     private Object message;
     private int code;
     private boolean state;
 
-    public static <T> T success(Object data) {
+	public static <T> T success(Object data) {
         return (T) new R(data,"访问成功",10000,true);
     }
 
