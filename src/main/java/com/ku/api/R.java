@@ -22,8 +22,16 @@ public class R<T> implements Serializable {
     public static <T> T failure(Object message) {
         return (T) new R(null,message,10002,true);
     }
+    
+    public static <T> T failure(Integer code,Object message) {
+        return (T) new R(null,message,10002,true);
+    }
+    
     public static <T> T error( Object message) {
         return (T) new R(null,message,10001,false);
+    }
+    public static <T> T error(Integer code, Object message) {
+        return (T) new R(null,message,code,false);
     }
     public  static <T> T error() {
         return (T) new R(null,"系统异常",10001,false);

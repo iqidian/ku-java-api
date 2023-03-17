@@ -15,42 +15,19 @@ public class Operational {
         Operational.warning(message);
     }
 
-    public static void isNull(Object o,String message){
-        if(o == null){
-            Operational.warning(message);
-        }
-    }
-
-    public static void isNotNull(Object o, String message) {
-        if(o != null){
-            Operational.warning(message);
-        }
+	public static void isNull(Object o,String message){
+    	if(o == null || "".equals(o)) {
+    		 Operational.warning(message);
+    	}
+    	if(o instanceof String) {
+    		isBlank(o.toString(), message);
+    	}
     }
     
     public static void isBlank(String o,String message) {
-    	isNull(o, message.toString());
     	if(o.trim().length()<=0) {
     		Operational.warning(message.toString());
     	}
-    }
-    
-    public static void isNotBlank(String o,String message) {
-    	isNotNull(o, message.toString());
-    	if(o.trim().length()>0) {
-    		Operational.warning(message.toString());
-    	}
-    }
-
-    public static  void isNull(String str,String message){
-        if (str.trim().length()<=0){
-            Operational.warning(message);
-        }
-    }
-
-    public static void isNotNull(String str,String message){
-        if(str.trim().length()>0){
-            Operational.warning(message);
-        }
     }
     public static void isTrue(Boolean is,String message){
         if(is){
