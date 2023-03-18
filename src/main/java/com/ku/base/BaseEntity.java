@@ -1,11 +1,12 @@
 package com.ku.base;
 
+import com.ku.annotation.Remark;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 @Data
 public class BaseEntity {
-    //状态 0 默认
+    @Remark(value = "状态 0 默认")
     private int status;
     //创建人姓名
     private String createFullName;
