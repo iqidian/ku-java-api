@@ -53,11 +53,6 @@ public class StringUtils {
         return !isBlank(cs);
     }
 
-    /**
-     * 转小写
-     * @param str
-     * @return
-     */
     public static String lowerCase(final String str) {
         if (str == null) {
             return null;
@@ -65,11 +60,6 @@ public class StringUtils {
         return str.toLowerCase();
     }
 
-    /**
-     *  转大写
-     * @param str
-     * @return
-     */
     public static String upperCase(final String str) {
         if (str == null) {
             return null;
