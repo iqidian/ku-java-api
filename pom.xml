@@ -6,7 +6,7 @@
 
 	<groupId>io.github.ku-quick</groupId>
 	<artifactId>ku-java-api</artifactId>
-	<version>1.0.2.2</version>
+	<version>1.0.2.4</version>
 	<name>ku-java-api</name>
 	<url>https://github.com/ku-quick/ku-java-api.git</url>
 	<description>常用工具类</description>
